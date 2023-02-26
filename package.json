@@ -1,0 +1,33 @@
+{
+  "name": "altaqwaa_bot",
+  "description": "Altawaa Bot [ quran, adhkar, video, photo, islamic ]",
+  "version": "1.0.0",
+  "author": "rn0x",
+  "license": "MIT",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "bot",
+    "بوت",
+    "islam",
+    "islamic",
+    "telegram",
+    "json",
+    "puppeteer",
+    "adhkar",
+    "quran",
+    "mp3",
+    "video",
+    "بوت_إسلامي"
+  ],
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "moment-hijri": "^2.1.2",
+    "node-fetch": "^3.3.0",
+    "puppeteer": "^19.7.2",
+    "telegraf": "^4.11.2"
+  }
+}

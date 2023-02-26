@@ -1,0 +1,151 @@
+@font-face {
+    font-family: Vazirmatn_Bold;
+    src: url(./font/Vazirmatn-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'Amiri';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./font/Amiri.woff2) format('woff2');
+    unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+html,
+body {
+    width: 100%;
+    background-color: #e9d7b7;
+    background-image: url(./old.svg);
+    background-size: cover;
+    margin: 0px 0px 0px 0px;
+    direction: rtl;
+    font-family: 'Vazirmatn_Bold';
+    background-repeat: no-repeat;
+}
+
+/* =========== header ===========*/
+
+#header_top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#header_top>div {
+    margin: 5px 30px 5px 30px;
+}
+
+#number {
+    color: #a52a2a;
+    font-size: 165px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 0 0 0;
+}
+
+#today {
+    display: block;
+    text-align: center;
+}
+
+#today_ar {
+    font-size: 60px;
+    margin: 0 0 0 0;
+    color: #000000;
+}
+
+#today_en {
+    font-size: 15px;
+    color: #a52a2a;
+    font-weight: bold;
+    margin: 0 0 0 0;
+}
+
+#header_bottom {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-top: 0.5px;
+    border-bottom: 0.5px;
+    border-top-style: solid;
+    border-top-color: #a52a2a;
+    border-bottom-style: solid;
+    border-bottom-color: #a52a2a;
+}
+
+#header_bottom>p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* =========== content ===========*/
+
+#content {
+    margin-bottom: 40px;
+}
+#title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 270px;
+    border-radius: 5px;
+    background-color: #e9d7b7;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #a52a2a;
+}
+
+#text {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 20px;
+    border: 0.5px;
+    border-style: solid;
+    border-color: #a52a2a;
+    color: #887d6b;
+    font-family: 'Amiri';
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+
+/* =========== footer ===========*/
+
+#footer{
+    width: 100%;
+    margin-top: 0px;
+    background-color: #a52a2a;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo{
+    width: 100px;
+}
+
+#footer_text p{
+    color: #fff;
+    margin: 0 0 0 0;
+    font-size: 12px;
+}
+
+#website{
+    display: block;
+    color: #fff;
+    margin: 0 0 0 0;
+    text-align: center;
+    font-size: 10px;
+    font-variant: small-caps;
+}
