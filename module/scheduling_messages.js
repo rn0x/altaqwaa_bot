@@ -38,7 +38,7 @@ export default async (client) => {
                     message += `▪️ <b>مكان النزول:</b> ${mp3quranRandom?.descent} | ${mp3quranRandom?.descent_english}`
 
 
-                    if (FileSize.split('.')[0] >= 50 && FileSize.split(' ')[1] === 'MB') {
+                    if (FileSize.split('.')[0] >= 20 && FileSize.split(' ')[1] === 'MB') {
 
                         message += `\n▪️ <b>رابط ملف الصوت:</b> \n\n${mp3quranRandom?.link}`
                         await client.telegram.sendAudio(item?.id, message, {
