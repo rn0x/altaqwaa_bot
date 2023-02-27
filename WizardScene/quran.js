@@ -108,7 +108,7 @@ export default new Scenes.WizardScene(
                         message += `▪️ <b>مكان النزول:</b> ${item?.descent} | ${item?.descent_english}`
 
 
-                        if (FileSize.split('.')[0] >= 50 && FileSize.split(' ')[1] === 'MB') {
+                        if (FileSize.split('.')[0] >= 20 && FileSize.split(' ')[1] === 'MB') {
 
                             message += `\n▪️ <b>رابط ملف الصوت:</b> \n\n${item?.link}`
                             await ctx.reply(message, {
