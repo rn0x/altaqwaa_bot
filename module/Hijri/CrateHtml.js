@@ -20,7 +20,7 @@ export default async function CrateHtml() {
     let todayEn = moment_hijri().locale('en').format('dddd'); // اليوم
     let Hijri = moment_hijri().locale('ar-SA').format('iMMMM iYYYY');
     let Hijri_Number = moment_hijri().locale('ar-SA').format('iD');
-    let Gregorian = moment_hijri().locale('en').format('YYYY MMMM D');
+    let Gregorian = moment_hijri().locale('en').format('YYYY/M/D');
     let albitaqat = fs.readJsonSync('./files/json/albitaqat.json');
     let random = albitaqat[Math.floor(Math.random() * albitaqat.length)];
     let randomArr = Arr[Math.floor(Math.random() * Arr.length)];
@@ -100,7 +100,7 @@ export default async function CrateHtml() {
         today: today,
         todayEn: todayEn,
         Hijri: moment_hijri().locale('ar-SA').format('iYYYY/iM/iD'),
-        Gregorian: moment_hijri().locale('en').format('L'),
+        Gregorian: moment_hijri().locale('en').format('YYYY/M/D'),
         title: title,
         surah: random?.surah,
         body: Array.isArray(random?.[randomArr]) ? random?.[randomArr].join('\n') : random?.[randomArr]
