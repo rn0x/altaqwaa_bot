@@ -50,7 +50,7 @@ async function teleAltaqwaa() {
     // Override Error Handling
     
     client.catch(async (error) => {
-        await error_handling(error)
+        await error_handling(error, client);
     });
 
 }
