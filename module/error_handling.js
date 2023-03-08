@@ -1,7 +1,7 @@
 import fs from 'fs-extra';
 import path from 'path';
 
-export default async (error) => {
+export default async (error, client) => {
 
     const __dirname = path.resolve();
 
@@ -25,6 +25,28 @@ export default async (error) => {
             fs.existsSync(path?.join(__dirname, `./database/${id_user}.json`)) ?
                 fs.removeSync(path?.join(__dirname, `./database/${id_user}.json`)) : false;
 
+        }
+
+        else if (error.response.description === "Bad Request: need administrator rights in the channel chat") {
+
+            let id_user = error.on.payload.chat_id
+            fs.existsSync(path?.join(__dirname, `./database/${id_user}.json`)) ?
+                fs.removeSync(path?.join(__dirname, `./database/${id_user}.json`)) : false;
+
+        }
+        
+        else if (error.response.description === "Bad Request: not enough rights to send videos to the chat") {
+
+            let id_user = error.on.payload.chat_id
+            let message = 'طلب غير صالح: لا توجد حقوق كافية لإرسال مقاطع فيديو إلى الدردشة'
+            await client.telegram.sendAudio(id_user, message);
+        }
+
+        else if (error.response.description === "Bad Request: not enough rights to send photos to the chat") {
+
+            let id_user = error.on.payload.chat_id
+            let message = 'طلب غير صالح: لا توجد حقوق كافية لإرسال الصور إلى الدردشة'
+            await client.telegram.sendAudio(id_user, message);
         }
 
         else if (error.response.description === "Bad Request: need administrator rights in the channel chat") {
