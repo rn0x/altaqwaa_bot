@@ -41,7 +41,7 @@ export default async (client) => {
                     if (FileSize.split('.')[0] >= 20 && FileSize.split(' ')[1] === 'MB') {
 
                         message += `\n▪️ <b>رابط ملف الصوت:</b> \n\n${mp3quranRandom?.link}`
-                        await client.telegram.sendAudio(item?.id, message, {
+                        await client.telegram.sendMessage(item?.id, message, {
                             parse_mode: 'HTML'
                         })
 
