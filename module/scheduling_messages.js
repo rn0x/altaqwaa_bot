@@ -49,7 +49,7 @@ export default async (client) => {
 
                     else {
 
-                        await client.telegram.sendAudio(item?.id, mp3quranRandom?.link, {
+                        await client.telegram.sendAudio(item?.id, { url: mp3quranRandom?.link }, {
                             caption: message,
                             parse_mode: 'HTML'
                         });
